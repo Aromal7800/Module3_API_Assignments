@@ -15,7 +15,7 @@ DeleteUsers(client);
 static void GetUsers(RestClient client)
 {
 
-    var getUserRequest = new RestRequest("users/2", Method.Get);
+    var getUserRequest = new RestRequest("users", Method.Get);
     var getUserResponse = client.Execute(getUserRequest);
     Console.WriteLine(getUserResponse.Content);
 
