@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module3_API_Assignments", "Module3_API_Assignments\Module3_API_Assignments.csproj", "{AF6E4774-2D78-45CB-BABC-0BF85371413D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module3_API_Assignments", "Module3_API_Assignments\Module3_API_Assignments.csproj", "{AF6E4774-2D78-45CB-BABC-0BF85371413D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignment-2-Dec-12", "Assignment-2-Dec-12\Assignment-2-Dec-12.csproj", "{98100718-A97F-470E-AD94-8AEC3E74097E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignment-2-Dec-12", "Assignment-2-Dec-12\Assignment-2-Dec-12.csproj", "{98100718-A97F-470E-AD94-8AEC3E74097E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module3_CaseStudy", "Module3_CaseStudy\Module3_CaseStudy.csproj", "{D5146FC8-7FDE-4874-9A73-A2462137F54A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{98100718-A97F-470E-AD94-8AEC3E74097E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98100718-A97F-470E-AD94-8AEC3E74097E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98100718-A97F-470E-AD94-8AEC3E74097E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5146FC8-7FDE-4874-9A73-A2462137F54A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5146FC8-7FDE-4874-9A73-A2462137F54A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5146FC8-7FDE-4874-9A73-A2462137F54A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5146FC8-7FDE-4874-9A73-A2462137F54A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
