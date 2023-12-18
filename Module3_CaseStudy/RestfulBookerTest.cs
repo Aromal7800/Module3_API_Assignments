@@ -120,25 +120,13 @@ namespace Module3_CaseStudy
         {
             test = extent.CreateTest("Update User");
             Log.Information("Update User test started");
-            var reqAuth = new RestRequest("/auth",Method.Post);
-            reqAuth.AddHeader("Content-Type", "application/json");
-            reqAuth.AddJsonBody(new { username = "admin", password = "password123" });
-            var res = client.Execute(reqAuth);
+           
 
             try
             {
-
-
-                Assert.That(res.StatusCode, Is.EqualTo(System.Net.HttpStatusCode.OK));
-                Log.Information($"Api Error:{res.Content}");
-                var user = JsonConvert.DeserializeObject<Cookies>(res.Content);
-                Assert.NotNull(user);
-                Log.Information("Update User test passed");
-
-                test.Pass("Update User Test Passed");
                 var reqput = new RestRequest("booking/12", Method.Put);
                 reqput.AddHeader("Content-Type", "Application/Json");
-                reqput.AddHeader("Cookie", "token=" + user.Token);
+                reqput.AddHeader("Cookie", "token=" + GetAut());
                 reqput.AddJsonBody(new
                 {
                     firstname = "amal",
@@ -169,21 +157,16 @@ namespace Module3_CaseStudy
         public void DeleteBooking(int usrid)
         {
             
-            //client.Authenticator = new HttpBasicAuthenticator(Username, Password);
+           
             test = extent.CreateTest("Delete User");
             Log.Information("Delete user test started");
-            var reqAuth = new RestRequest("/auth", Method.Post);
-            reqAuth.AddHeader("Content-Type", "application/json");
-            reqAuth.AddJsonBody(new { username = "admin", password = "password123" });
-            var res= client.Execute(reqAuth);
+        
             try
             {
-             var user1 = JsonConvert.DeserializeObject<Cookies>(res.Content);
+          
                 var req = new RestRequest("/booking/" + usrid, Method.Delete)
                      .AddHeader("Content-Type", "application/json");
-                req.AddHeader("Cookie", "token=" + user1.Token);
-                 //.AddHeader("Authorization", $"Bearer {AccessToken}");
-
+                req.AddHeader("Cookie", "token=" + GetAut());              
             var response = client.Execute(req);
                 req.AddJsonBody(new
                 {

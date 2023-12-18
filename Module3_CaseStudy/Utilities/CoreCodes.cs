@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Module3_CaseStudy
 {
@@ -43,5 +44,19 @@ namespace Module3_CaseStudy
         {
             extent.Flush();
         }
+
+        public string GetAut()
+        {
+
+            test = extent.CreateTest("Auth User Test");
+            var req = new RestRequest("/auth", Method.Post);
+            req.AddHeader("Content-Type", "application/json");
+            req.AddJsonBody(new { username = "admin", password = "password123" });
+            var res = client.Execute(req);
+            var userdata = JsonConvert.DeserializeObject<Cookies>(res.Content);
+
+            return userdata.Token;
+        }
     }
+            
 }
